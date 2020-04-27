@@ -1,0 +1,232 @@
+@startuml
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+
+class UICollectionViewCell {
+  +init(frame:)
+  +init(coder:)
+  +encode(with:)
+  +prepareForReuse()
+}
+
+class "KeyCollectionViewCell" as KeyCollectionViewCell {
+  key: String
+}
+
+KeyCollectionViewCell --|> UICollectionViewCell
+
+class UICollectionViewLayout {
+  +prepare()
+  +invalidateLayout()
+  +shouldInvalidateLayout(forBoundsChange:) -> Bool
+  +layoutAttributesForElements(in:) -> [UICollectionViewLayoutAttributes]?
+  +layoutAttributesForItem(at:) -> UICollectionViewLayoutAttributes?
+}
+
+class "KeyboardCollectionViewLayout" as KeyboardCollectionViewLayout {
+  -numberOfItems(inSection:) -> Int
+  -prepareElement(of:with:)
+  -frameForCell(of:with:) -> CGRect
+  -originForCell(of:with:) -> CGPoint
+
+}
+
+KeyboardCollectionViewLayout --|> UICollectionViewLayout
+
+
+
+class "NSCopying" as NSCopying << (P,GoldenRod) protocol >> {
+  copy(with:)
+}
+
+class "Grid<T>" as Grid {
+  matrix: [T]
+  rows: Int
+  columns: Int
+
+  +init(columns:rows:defaultValue:)
+  -init()
+  +indexIsValidForRow(column:row:) -> Bool
+  
+  +subscript(bigram:) -> T
+  +subscript(col:, row:) -> T
+
+}
+
+Grid --|> NSCopying
+
+class "KeyboardViewControllerDelegate" as KeyboardViewControllerDelegate << (P,GoldenRod) protocol >> {
+  keyboardViewController(_:didChangeScore:)
+  keyboardViewController(_:didChangeTemperature:)
+
+}
+
+class "AnnealedDelegate" as AnnealedDelegate << (P,GoldenRod) protocol >> {
+  annealed(_:didAcceptNewState:with:temperature:)
+
+}
+
+class "IndexPath" as IndexPath << (E,orchid) extension >> {
+  init(column:row:)
+
+}
+
+class "Keyboard" as Keyboard {
+  +row: Int
+  +columns: Int
+
+  -init(rows:columns:)
+  +init(rows:columns:grid:)
+  +indexForCharacter(_:) -> IndexPath?
+  +characterForItem(at:) -> Character?
+  +setCharacter(_:at:)
+  +shuffle()
+  +smallShuffle() -> Keyboard
+  +distanceFrom(_:to:) -> Double?
+  
+  +alphabet: [Character]
+  -randomCharSet: [Character]
+  +indexes: [IndexPath]
+  -randomIndexSet: [IndexPath]
+
+}
+
+Keyboard ---"1" Grid
+
+
+class "KeyboardRater" as KeyboardRater {
+  +init(frequencies:)
+  +rateKeyboard(_:) -> Double
+
+}
+
+KeyboardRater ---"1" BigramFrequencies
+
+class "Annealed" as Annealed {
+  -supplementaryHeat: Double?
+  -workItem: DispatchWorkItem?
+  +bestState: (state: T, energy: Double)?
+
+  +start(initialeState:temperature:nextState:energyForState:)
+  +stop()
+  +boil(_:)
+  -temp(initialTemperature:) -> Double
+  -probability(delta:temperature:) -> Double
+
+}
+
+Annealed ---"1" AnnealedDelegate
+
+class "BigramParser" as BigramParser {
+  +typealias Number = Double
+  +separator: String
+  +lineSeparator: String
+  +rowNames: Bool
+  +columnNames: Bool
+
+  +parseFile(_:size:)
+  -parseData(_:on:)
+  -parseContent(_:on:)
+  -parseLine(_:content:on:)
+
+}
+
+BigramParser ---"1" Grid
+
+class "BigramParserError" as BigramParserError << (E,LightSteelBlue) enum >> {
+  invalidValue(String)
+  invalidFile
+}
+
+BigramParserError -- Error
+
+class "BigramFrequencies" as BigramFrequencies {
+  +init(grid:)
+  +normalize()
+  +frequencyForBigram(_:_:) -> BigramParser.Number
+
+}
+
+BigramFrequencies ---"1" Grid
+
+
+class "UIViewController" as UIViewController << (E,orchid) extension >> {
+  error(message:completion:)
+  info(message:completion:)
+  showAlert(title:message:completion:)
+
+}
+
+class "UICollectionViewController" as UICollectionViewController {
+  -numberOfSections(in:)
+  -collectionView(_:numberOfItemsInSection:)
+  -collectionView(_:cellForItemAt:)
+  -collectionView(_:didHighlightItemAt:)
+  -collectionView(_:didUnhighlightItemAt:)
+}
+
+class "KeyboardViewController" as KeyboardViewController {
+  +shouldPresentBestState: Bool
+
+  +viewDidLoad()
+  +start(temperature:)
+  +stop()
+  +boil(_:)
+
+}
+KeyboardViewController ---"1" Keyboard
+KeyboardViewController ---"1" BigramFrequencies
+KeyboardViewController ---"1" KeyboardViewControllerDelegate
+KeyboardViewController ---"1" Annealed
+
+class "KeyboardViewController" as KeyboardViewController1 << (E,orchid) extension >> {
+  annealed(_:didAcceptNewState:with:temperature:)
+
+}
+
+KeyboardViewController --|> UICollectionViewController
+KeyboardViewController --|> AnnealedDelegate
+KeyboardViewController <.. KeyboardViewController1 : ext
+
+class "UITableViewController" as UITableViewController {
+  +tableView(_:shouldHighlightRowAt:)
+}
+
+class "MasterViewController" as MasterViewController {
+  @IBOutlet temperatureSlider: UISlider!
+  @IBOutlet temperatureLabel: UILabel!
+  @IBOutlet frequenciesButton: UIButton!
+  @IBOutlet scoreLabel: UILabel!
+  @IBOutlet startButton: UIButton!
+  @IBOutlet stopButton: UIButton!
+
+  @IBAction temperatureChanged(_:)
+  @IBAction setFrequenciesFile(_:)
+  @IBAction boid(_:)
+  @IBAction startSimulation(_:)
+  @IBAction stopSimulation(_:)
+  @IBAction toggleView(_:)
+  +viewDidLoad()
+  -resetFrequeciesButton()
+  
+}
+
+class "MasterViewController" as MasterViewController1 << (E,orchid) extension >> {
+  documentPicker(_:didPickDocumentsAt:)
+
+}
+class "MasterViewController" as MasterViewController2 << (E,orchid) extension >> {
+  keyboardViewController(_:didChangeScore:)
+  keyboardViewController(_:didChangeTemperature:)
+
+}
+
+MasterViewController --|> UITableViewController
+MasterViewController --|> UIDocumentPickerDelegate
+MasterViewController --|> KeyboardViewControllerDelegate
+MasterViewController <.. MasterViewController1 : ext
+MasterViewController <.. MasterViewController2 : ext
+
+@enduml

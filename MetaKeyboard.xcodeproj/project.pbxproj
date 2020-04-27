@@ -14,6 +14,18 @@
 		A2438F252452392A0029C2C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2438F232452392A0029C2C8 /* Main.storyboard */; };
 		A2438F272452392B0029C2C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2438F262452392B0029C2C8 /* Assets.xcassets */; };
 		A2438F2A2452392B0029C2C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2438F282452392B0029C2C8 /* LaunchScreen.storyboard */; };
+		A2438F39245244630029C2C8 /* KeyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2438F38245244630029C2C8 /* KeyCollectionViewCell.swift */; };
+		A2438F3B2452453E0029C2C8 /* KeyboardCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2438F3A2452453E0029C2C8 /* KeyboardCollectionViewLayout.swift */; };
+		A2700BF62452659100DA41C7 /* KeyboardRater.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2700BF52452659100DA41C7 /* KeyboardRater.swift */; };
+		A2700BF92452699300DA41C7 /* BigramParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2700BF82452699300DA41C7 /* BigramParser.swift */; };
+		A2700BFB2452706900DA41C7 /* BigramFrequencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2700BFA2452706900DA41C7 /* BigramFrequencies.swift */; };
+		A2700BFD24528E1E00DA41C7 /* KeyboardViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2700BFC24528E1E00DA41C7 /* KeyboardViewControllerDelegate.swift */; };
+		A2700C0024528F9500DA41C7 /* Annealed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2700BFF24528F9500DA41C7 /* Annealed.swift */; };
+		A2700C042452A59700DA41C7 /* AnnealedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2700C032452A59700DA41C7 /* AnnealedDelegate.swift */; };
+		A2700C062452B53500DA41C7 /* ViewController+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2700C052452B53500DA41C7 /* ViewController+UIAlertController.swift */; };
+		A27F037D24579C7D000EA802 /* uml in Resources */ = {isa = PBXBuildFile; fileRef = A27F037C24579C7D000EA802 /* uml */; };
+		A2982AC124525AC80077C8F7 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2982AC024525AC80077C8F7 /* Keyboard.swift */; };
+		A2982AC324525B790077C8F7 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2982AC224525B790077C8F7 /* Grid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +38,20 @@
 		A2438F262452392B0029C2C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2438F292452392B0029C2C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2438F2B2452392B0029C2C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2438F31245239360029C2C8 /* MetaKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MetaKeyboard.entitlements; sourceTree = "<group>"; };
+		A2438F38245244630029C2C8 /* KeyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCollectionViewCell.swift; sourceTree = "<group>"; };
+		A2438F3A2452453E0029C2C8 /* KeyboardCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCollectionViewLayout.swift; sourceTree = "<group>"; };
+		A2700BF42452645C00DA41C7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A2700BF52452659100DA41C7 /* KeyboardRater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardRater.swift; sourceTree = "<group>"; };
+		A2700BF82452699300DA41C7 /* BigramParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigramParser.swift; sourceTree = "<group>"; };
+		A2700BFA2452706900DA41C7 /* BigramFrequencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigramFrequencies.swift; sourceTree = "<group>"; };
+		A2700BFC24528E1E00DA41C7 /* KeyboardViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewControllerDelegate.swift; sourceTree = "<group>"; };
+		A2700BFF24528F9500DA41C7 /* Annealed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annealed.swift; sourceTree = "<group>"; };
+		A2700C032452A59700DA41C7 /* AnnealedDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnealedDelegate.swift; sourceTree = "<group>"; };
+		A2700C052452B53500DA41C7 /* ViewController+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UIAlertController.swift"; sourceTree = "<group>"; };
+		A27F037C24579C7D000EA802 /* uml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uml; sourceTree = "<group>"; };
+		A2982AC024525AC80077C8F7 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		A2982AC224525B790077C8F7 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +84,86 @@
 		A2438F1A2452392A0029C2C8 /* MetaKeyboard */ = {
 			isa = PBXGroup;
 			children = (
-				A2438F1B2452392A0029C2C8 /* AppDelegate.swift */,
-				A2438F1D2452392A0029C2C8 /* SceneDelegate.swift */,
-				A2438F1F2452392A0029C2C8 /* MasterViewController.swift */,
-				A2438F212452392A0029C2C8 /* DetailViewController.swift */,
-				A2438F232452392A0029C2C8 /* Main.storyboard */,
-				A2438F262452392B0029C2C8 /* Assets.xcassets */,
-				A2438F282452392B0029C2C8 /* LaunchScreen.storyboard */,
+				A2438F31245239360029C2C8 /* MetaKeyboard.entitlements */,
 				A2438F2B2452392B0029C2C8 /* Info.plist */,
+				A2438F262452392B0029C2C8 /* Assets.xcassets */,
+				A2438F32245243990029C2C8 /* View */,
+				A2438F34245243D80029C2C8 /* Misc */,
+				A2438F35245243F50029C2C8 /* Controller */,
+				A2438F36245244000029C2C8 /* Model */,
+				A2700BF42452645C00DA41C7 /* README.md */,
+				A27F037C24579C7D000EA802 /* uml */,
 			);
 			path = MetaKeyboard;
+			sourceTree = "<group>";
+		};
+		A2438F32245243990029C2C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2438F232452392A0029C2C8 /* Main.storyboard */,
+				A2438F282452392B0029C2C8 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2438F34245243D80029C2C8 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				A2438F1B2452392A0029C2C8 /* AppDelegate.swift */,
+				A2438F1D2452392A0029C2C8 /* SceneDelegate.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		A2438F35245243F50029C2C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A2438F1F2452392A0029C2C8 /* MasterViewController.swift */,
+				A2700C052452B53500DA41C7 /* ViewController+UIAlertController.swift */,
+				A2438F212452392A0029C2C8 /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A2438F36245244000029C2C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2438F37245244240029C2C8 /* CollectionView */,
+				A2700BF72452697100DA41C7 /* Parser */,
+				A2700BFE24528F8000DA41C7 /* Delegate */,
+				A2982AC024525AC80077C8F7 /* Keyboard.swift */,
+				A2700BF52452659100DA41C7 /* KeyboardRater.swift */,
+				A2982AC224525B790077C8F7 /* Grid.swift */,
+				A2700BFF24528F9500DA41C7 /* Annealed.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A2438F37245244240029C2C8 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A2438F38245244630029C2C8 /* KeyCollectionViewCell.swift */,
+				A2438F3A2452453E0029C2C8 /* KeyboardCollectionViewLayout.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		A2700BF72452697100DA41C7 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				A2700BF82452699300DA41C7 /* BigramParser.swift */,
+				A2700BFA2452706900DA41C7 /* BigramFrequencies.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		A2700BFE24528F8000DA41C7 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				A2700C032452A59700DA41C7 /* AnnealedDelegate.swift */,
+				A2700BFC24528E1E00DA41C7 /* KeyboardViewControllerDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +226,7 @@
 			files = (
 				A2438F2A2452392B0029C2C8 /* LaunchScreen.storyboard in Resources */,
 				A2438F272452392B0029C2C8 /* Assets.xcassets in Resources */,
+				A27F037D24579C7D000EA802 /* uml in Resources */,
 				A2438F252452392A0029C2C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,10 +238,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2700BF92452699300DA41C7 /* BigramParser.swift in Sources */,
+				A2700BF62452659100DA41C7 /* KeyboardRater.swift in Sources */,
 				A2438F1C2452392A0029C2C8 /* AppDelegate.swift in Sources */,
 				A2438F1E2452392A0029C2C8 /* SceneDelegate.swift in Sources */,
+				A2982AC124525AC80077C8F7 /* Keyboard.swift in Sources */,
+				A2982AC324525B790077C8F7 /* Grid.swift in Sources */,
 				A2438F202452392A0029C2C8 /* MasterViewController.swift in Sources */,
+				A2700BFB2452706900DA41C7 /* BigramFrequencies.swift in Sources */,
+				A2438F3B2452453E0029C2C8 /* KeyboardCollectionViewLayout.swift in Sources */,
+				A2438F39245244630029C2C8 /* KeyCollectionViewCell.swift in Sources */,
+				A2700C062452B53500DA41C7 /* ViewController+UIAlertController.swift in Sources */,
+				A2700BFD24528E1E00DA41C7 /* KeyboardViewControllerDelegate.swift in Sources */,
 				A2438F222452392A0029C2C8 /* DetailViewController.swift in Sources */,
+				A2700C042452A59700DA41C7 /* AnnealedDelegate.swift in Sources */,
+				A2700C0024528F9500DA41C7 /* Annealed.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,13 +328,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -274,12 +383,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -288,15 +398,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MetaKeyboard/MetaKeyboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R72YBJYJW5;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = NO;
 				INFOPLIST_FILE = MetaKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ugocottin.MetaKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -306,15 +420,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MetaKeyboard/MetaKeyboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R72YBJYJW5;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = NO;
 				INFOPLIST_FILE = MetaKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ugocottin.MetaKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
